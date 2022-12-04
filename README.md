@@ -65,6 +65,8 @@ is a modular:
   - see: https://minimal.idzona.com/emulator
   - see: https://demo.os-js.org/
 - https://beakerbrowser.com/ a p2p editor and browser
+  - the results of that get merged into code-oss which then offers that out of the box as it self gets a web-module
+  - https://github.com/microsoft/vscode/issues/167505
 
 after that you maybe understand what this adds to the web with my new update activity pub standard upgrade based on a unified module format that is auditable and route able via Web 4.0 forms the Web 4.0 no Nativ host needed any more
 
