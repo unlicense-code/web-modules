@@ -13,11 +13,21 @@ distributed content system that seeks to connect all computing devices with the 
 
 web-modules is the new major system of the internet / web 4.0. If built right, it replaces HTTP3. It could complement or replace even more. Let's go point-by-point into how.
 
+
+For routing/retrieval, the nodes perform a DHT operations using the Kubo RPC API (/v0/dht/*). querys the DHT for peers and content providers, and then they fetch the content, which they provide for the browser nodes that are connected to them.
+
+contacts the preload (Genesis Boot Nodes) using Kubo RPC API (/v0/refs) to preload the entire dag. The Genesis Boot nodes fetche the data from the browser over Bitswap and then advertises it on the DHT.
+
+Note: Genesis Boot could be understood as ephemeral pinning. The CIDs' data is fetched by a Genesis Boot nodes for a short period during which it is available to the web-modules content address distributed build grid network, and after it is garbage collected.
+
+nodes running in the browser can connect to nodes via the WebRTC Star or other cluster transports.
+
 ## web-modules is a protocol:
 - Defines a content-addressed device or system
 - Coordinates content delivery via a capability based protocol full isolation like vm's
 - Combines Kademlia + BitTorrent + Git to supply you out of the box versioning enables world wide shared build grid.
 - web-modules can represent a device or a file system:
+- supports all kinds of network cluster algos like star and chain 
 
 ## web-modules Has directories and files as also devices and modules
 - Is a mountable filesystem (via FUSE)
