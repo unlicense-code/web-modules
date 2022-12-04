@@ -58,3 +58,14 @@ is a modular:
 - It serves to build trust chains
 - It's compatible with other NSes
 - Can map DNS, .onion, .bit, etc to IPNS
+
+
+## Some Experimental incremental build artifacts that run indipendent already
+- It can Run linux builds in a browser on virtual x86 emulated via a wasm module. 
+  - see: https://minimal.idzona.com/emulator
+  - see: https://demo.os-js.org/
+- https://beakerbrowser.com/ a p2p editor and browser
+
+after that you maybe understand what this adds to the web with my new update activity pub standard upgrade based on a unified module format that is auditable and route able via Web 4.0 forms the Web 4.0 no Nativ host needed any more
+
+We decoupled the Platform complet and always remember that is only a slow poc we have that also none published as high performance implementations and even other archs but i am the only one working on the whole ecosystem i need some evangelists and developers to join the effort asap so i can focus on products and not the fundamentals 
