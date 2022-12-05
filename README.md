@@ -5,7 +5,7 @@ This Implements a basic Module Loader for Web Runtimes it builds the backbone fo
 ECMAScript Modules and Asset References. This offers the Basic Loading and Versioning Structure for the Code. 
 
 
-web-modules has evolved the infrastructure of the Web, with many things we've learned from successful systems, like Git, BitTorrent, Kademlia, Bitcoin, and many, many more. This is the sort of thing that would have come out of ARPA/DARPA, IETF, or Bell Labs in another age. Web 4.0 state 2 after genesis boot so V_ETH2 on top of WebRTC for interop with the existing legacy web.
+web-modules has evolved the infrastructure of the Web, with many things we've learned from successful systems, like Zircon, v8, Git, GN, Ninja, Goma, and many, many more. This is the sort of thing that would have come out of ARPA/DARPA, IETF, or Bell Labs in another age. Web 4.0 state 2 after genesis boot so V_ETH2 on top of WebRTC for interop with the existing legacy web.
 
 addressed by content and references so called specifiers. It enables the creation of completely distributed applications, and in doing so aims to make the web faster, safer, and more open.
 
