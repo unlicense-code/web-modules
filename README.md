@@ -4,6 +4,10 @@ A Web Module Loader can also be used in WInterCG Standard Supporting Runtimes
 This Implements a basic Module Loader for Web Runtimes it builds the backbone for the Web 4.0 as this is defined out of
 ECMAScript Modules and Asset References. This offers the Basic Loading and Versioning Structure for the Code. 
 
+## Development
+I have no plans to publish a incremental runtime at present as chromium exists for the once who need any interop there exists NWJS as Electron in the mean while. At present the main focus is on the development of a working Web 4.0 IDE to build Modules based on this stack. So Main work is to bring VSCodium the telemetry free VSCODE / CODE-OSS IDE into a state where it can work fully in the browser not only the editor part also all feedback interfaces and integrations. All Commits including the direct sockets API Proposal got shipped already inside chromium/chrome/edge safari does not support it at present but that is also not needed we have other interfaces for that kind of stuff. But that is low priority. Main Priority is getting a Solid Dev Expirence. So the ecosystem can evolve.
+
+## Preamble
 
 web-modules has evolved the infrastructure of the Web, with many things we've learned from successful systems, like Zircon, v8, Git, GN, Ninja, Goma, and many, many more. This is the sort of thing that would have come out of ARPA/DARPA, IETF, or Bell Labs in another age. Web 4.0 state 2 after genesis boot so V_ETH2 on top of WebRTC for interop with the existing legacy web. For the tech people who wonder about ETH2 Yes that Means Ethernet v2 the none 1500 MTU Bound Limited version. That you know still exist even with TCP/IP v6 as it is in herent in other places your kernel always joins the packets. This is only one example of old fundamental Flaws that exist since the begining of the Web there we calculated that 1500.
 
