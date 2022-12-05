@@ -5,7 +5,37 @@ This Implements a basic Module Loader for Web Runtimes it builds the backbone fo
 ECMAScript Modules and Asset References. This offers the Basic Loading and Versioning Structure for the Code. 
 
 
-web-modules has evolved the infrastructure of the Web, with many things we've learned from successful systems, like Zircon, v8, Git, GN, Ninja, Goma, and many, many more. This is the sort of thing that would have come out of ARPA/DARPA, IETF, or Bell Labs in another age. Web 4.0 state 2 after genesis boot so V_ETH2 on top of WebRTC for interop with the existing legacy web.
+web-modules has evolved the infrastructure of the Web, with many things we've learned from successful systems, like Zircon, v8, Git, GN, Ninja, Goma, and many, many more. This is the sort of thing that would have come out of ARPA/DARPA, IETF, or Bell Labs in another age. Web 4.0 state 2 after genesis boot so V_ETH2 on top of WebRTC for interop with the existing legacy web. For the tech people who wonder about ETH2 Yes that Means Ethernet v2 the none 1500 MTU Bound Limited version. That you know still exist even with TCP/IP v6 as it is in herent in other places your kernel always joins the packets. This is only one example of old fundamental Flaws that exist since the begining of the Web there we calculated that 1500.
+
+## History of Networking
+The MTU (Maximum Transmission Unit) states how big a single packet can be. Generally speaking, when you are talking to devices on your own LAN the MTU will be around 1500 bytes and the internet runs almost universally on 1500 as well. However, this does not mean that these link layer technologies can’t transmit bigger packets.
+
+For example, 802.11 (better known as WiFi) has a MTU of 2304 bytes, or if your network is using FDDI then you have a MTU around 4352 bytes. Ethernet itself has the concept of “jumbo frames”, where the MTU can be set up to 9000 bytes (on supporting NICs, Switches and Routers).
+
+However, almost none of this matters on the internet. Since the backbone of the internet is now mostly made up of ethernet links, the de facto maximum size of a packet is now unofficially set to 1500 bytes to avoid packets being fragmented down links.
+
+On the face of it 1500 is a weird number, we would normally expect a lot of constants in computing to be based around mathematical constants, like powers of 2. 1500, however fits none of those.
+
+So where did 1500 come from, and why are we still using it?
+
+The magic number
+Ethernet’s first major break into the world came in the form of 10BASE-2 (cheapernet) and 10BASE-5 (thicknet), the numbers indicating roughly how many hundred meters a single network segment could span over.
+
+Since there were many competing protocols at the time, and hardware limits existed, the original creator notes this in an email that the packet buffer memory requirements had some play in the magic 1500 number. (thanks to @yeled for finding this)
+
+In retrospect, a longer maximum might have been better, but if it increased the cost of NICs during the early days it may have prevented the widespread acceptance of Ethernet, so I’m not really concerned.
+
+However that is not the whole story. The “Ethernet: Distributed Packet Switching for Local Computer Networks” paper from 1980 is a early note of the efficiency cost analysis of larger packets on a network. This being especially important to ethernet at the time, since ethernet networks would ether be sharing the same coax cable between all systems, or there would be ethernet hubs that would only allow one packet at a time to be transmitted around all members of the ethernet segment.
+
+A number had to be picked that would mean that transmission latency on these shared (sometimes busy) segments would not be too high, but also that packet header overhead would not be too much. (see some of the tables on the paper linked above on page 15-16)
+
+It would seem at best that the engineers at the time picked 1500 bytes, or around 12000 bits as the best “safe” value.
+
+Since then various other transmission systems have come and gone, but the lowest MTU value of them has still been ethernet at 1500 bytes. Going bigger than lowest MTU on a network will either result in IP fragmentation, or the need to do path MTU detection. Both of which have their own sets of problems. Even if sometimes large OS vendors dropped the default MTU to even lower at times.
+
+watch more: https://blog.benjojo.co.uk/post/why-is-ethernet-mtu-1500
+
+## Module Internals
 
 addressed by content and references so called specifiers. It enables the creation of completely distributed applications, and in doing so aims to make the web faster, safer, and more open.
 
