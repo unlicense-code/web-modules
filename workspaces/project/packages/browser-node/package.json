@@ -1,0 +1,4 @@
+{ "name": "browser-node", "version": "21.0.0", "description": "NodeJS build via Holy EMScripten with some adjustments. This is the 2021 Iteration 22 will be the current.", 
+ "workspaces": [],
+ "dependencies": {}
+}
