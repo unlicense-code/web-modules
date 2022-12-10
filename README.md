@@ -1,4 +1,4 @@
-# web-modules a Standard for the Web 4.0
+# web-modules a web-container implementation based on web-modules
 A Web Module Loader can also be used in WInterCG Standard Supporting Runtimes
 
 This Implements a basic Module Loader for Web Runtimes it builds the backbone for the Web 4.0 as this is defined out of
