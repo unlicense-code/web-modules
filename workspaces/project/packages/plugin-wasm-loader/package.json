@@ -1,0 +1,1 @@
+{ "description":"@rollup/plugin-wasm-loader favors wasm dependencies over other npm dependencies if possible" }
