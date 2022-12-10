@@ -5,6 +5,9 @@ This Implements a basic Module Loader for Web Runtimes it builds the backbone fo
 ECMAScript Modules and Asset References. This offers the Basic Loading and Versioning Structure for the Code. 
 
 ## Development
+Stackblitz did a nice PoC of a NodeJS WASM build that they tryed to keep private i took the time to audit and reversee engineer it as also look into the quality details. will open Source it here. Just prepare for merge in Stackblitz core and browser-node which we will rename wasm-node as browser-node is already implemented via the Web Modules standard today.
+
+## Development Old
 I have no plans to publish a incremental runtime at present as chromium exists for the once who need any interop there exists NWJS as Electron in the mean while. At present the main focus is on the development of a working Web 4.0 IDE to build Modules based on this stack. So Main work is to bring VSCodium the telemetry free VSCODE / CODE-OSS IDE into a state where it can work fully in the browser not only the editor part also all feedback interfaces and integrations. All Commits including the direct sockets API Proposal got shipped already inside chromium/chrome/edge safari does not support it at present but that is also not needed we have other interfaces for that kind of stuff. But that is low priority. Main Priority is getting a Solid Dev Expirence. So the ecosystem can evolve.
 
 ## Preamble
