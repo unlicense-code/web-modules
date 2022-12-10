@@ -18,6 +18,9 @@ There are 6 types of web-containers they supply other levels of security and api
   - web-worker a ECMAScript worker with a own indipendent loop and context forks from current document implementation
   - wasm-worker a special type of web-worker that runs wasm modules they can only use UInt 8 values but that is enough to run code. learn about that via learning how UTF 8 works at the fundamental cors also reading about C strings after that is usefull. forks from current document implementation
 
+
+## Compatability Matrix
+
 ## Current Implementations
 - the stackblitz poc based on wasm and a service worker based tcp layer over long pooling sockets. 
 - Chromium API's eg: Devtools often demonstrated via projects like google labs carlo or puppeteer. 
