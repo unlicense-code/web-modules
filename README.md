@@ -4,6 +4,23 @@ A Web Module Loader can also be used in WInterCG Standard Supporting Runtimes
 This Implements a basic Module Loader for Web Runtimes it builds the backbone for the Web 4.0 as this is defined out of
 ECMAScript Modules and Asset References. This offers the Basic Loading and Versioning Structure for the Code. 
 
+## What are web-containers? 
+They are Workers ECMAScript workers are so called containers they can contain all kind of logic.
+They get supplyed internal via v8 as so called context v8 assigns a uniq security id internal to the context for programatical low level interactions
+with the context. This is used for Binary Snapshots for example. 
+
+## Current Implementations
+- the stackblitz poc based on wasm and a service worker based tcp layer over long pooling sockets. 
+- Chromium API's eg: Devtools often demonstrated via projects like google labs carlo or puppeteer. 
+ - It can be used to link your browser directly with your host system via many ways. some are
+   - stdio pipe
+   - websocket server
+   - browser extension using the debugger api
+   - filesystem access api
+   - everything that is iterarble so a Webstream API Compatible ECMAScript Object. that implements iterators or generators. 
+- the code-server and theia poc's
+  - this are moving a so called extension host to a environment and then connect via the network stack most of the time.
+   
 ## Development
 Stackblitz did a nice PoC of a NodeJS WASM build that they tryed to keep private i took the time to audit and reversee engineer it as also look into the quality details. will open Source it here. Just prepare for merge in Stackblitz core and browser-node which we will rename wasm-node as browser-node is already implemented via the Web Modules standard today.
 
