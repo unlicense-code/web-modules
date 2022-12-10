@@ -9,6 +9,14 @@ They are Workers ECMAScript workers are so called containers they can contain al
 They get supplyed internal via v8 as so called context v8 assigns a uniq security id internal to the context for programatical low level interactions
 with the context. This is used for Binary Snapshots for example. 
 
+There are 5 types of web-containers they supply other levels of security and api's
+
+- origin context supplyed by the browser and the domain your using in it.
+- document implementation is what offers you a new indipendent document that you can also use as globalThis for ECMAScript forks form origin context.
+- serviceWorker do implement a so called forward proxy container and resolve container forks from origin context
+- web-worker a ECMAScript worker with a own indipendent loop and context forks from current document implementation
+- wasm-worker a special type of web-worker that runs wasm modules they can only use UInt 8 values but that is enough to run code. learn about that via learning how UTF 8 works at the fundamental cors also reading about C strings after that is usefull. forks from current document implementation
+
 ## Current Implementations
 - the stackblitz poc based on wasm and a service worker based tcp layer over long pooling sockets. 
 - Chromium API's eg: Devtools often demonstrated via projects like google labs carlo or puppeteer. 
